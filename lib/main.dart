@@ -11,12 +11,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Gerir Senhas',
+      title: 'SenhaPro',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.indigo),
         useMaterial3: true,
       ),
-      home: const MyHomePage(title: 'Gerir Senhas Demo Page'),
+      home: const MyHomePage(title: 'SenhaPro Demo Page'),
     );
   }
 }
@@ -65,7 +65,7 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text(widget.title),
       ),
       body: Padding(
-        padding: const EdgeInsets.all(16.0),
+        padding: const EdgeInsets.all(30.0),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
@@ -73,7 +73,7 @@ class _MyHomePageState extends State<MyHomePage> {
               'Você clicou no botão $_counter vezes.',
               style: Theme.of(context).textTheme.headlineMedium,
             ),
-            const SizedBox(height: 20),
+            const SizedBox(height: 30),
             TextField(
               controller: _senhaController,
               decoration: const InputDecoration(
@@ -90,7 +90,7 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             const SizedBox(height: 20),
             const Text(
-              'Senhas adicionadas:',
+              'Senhas salvas:',
               style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
             ),
             Expanded(
@@ -109,7 +109,7 @@ class _MyHomePageState extends State<MyHomePage> {
       floatingActionButton: FloatingActionButton(
         onPressed: _incrementCounter,
         tooltip: 'Increment',
-        child: const Icon(Icons.add_box_outlined),
+        child: const Icon(Icons.add),
       ),
     );
   }
